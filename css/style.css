@@ -1,26 +1,49 @@
 body{
 
 }
-
+footer{
+  background: #9D50BB;
+  background: -webkit-linear-gradient(to left, #6E48AA, #9D50BB);
+  background: linear-gradient(to left, #6E48AA, #9D50BB);
+  color: white;
+}
+a.fa{
+  color: white;
+}
+.carousel-item>img{
+  width: 100%;
+}
 .navbar{
-  font-size: 18px;
-  font-weight: bold;
+  z-index: 10;
   position: fixed;
   bottom: 0;
-  width: 100%
-}
-.navbar-brand{
+  width: 100%;
+  padding-bottom: 0;
+  border-bottom: 5px solid #9D50BB;
 
 }
 .nav-item{
   margin-left: 4px;
   margin-right: 4px;
-  background-color: #9D50BB;
+  transform: translateY(16px);
+  border: 2px solid #9D50BB;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
 }
-.nav-link{
+.nav-item:hover{
+  background-color:#9D50BB;
+   border: 2px solid white;
+   transform: translateY(0);
+   transform: scale(1.2,1.2);
+}
+.nav-link:hover{
   color: white;
+}
+.nav-link{
+  color: #9D50BB;
+  font-family: 'Aclonica', cursive;
+  font-weight: normal;
+  font-size: 1em;
 }
 #intro{
   height: 100vh;
@@ -33,9 +56,24 @@ body{
 }
 h1{
   padding-top: 20px;
-  font-size: 3rem;
+  font-family: 'Aclonica', cursive;
+  letter-spacing: 2px;
+  font-size: 3em;
   color: white;
 }
+h3{
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  color: #9D50BB;
+  text-align: center;
+}
+h5{
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+}
+
 #skills-list{
   list-style-type: none;
   text-align: center;
@@ -45,17 +83,19 @@ h1{
   display: inline-block;
   text-align: center;
   font-size: 20px;
-  font-weight: bold;
+  font-family: sans-serif;
   padding-top: 40px;
   margin: 10px;
   height: 120px;
   width: 120px;
-  color: #9D50BB;
-  border: 7px solid #9D50BB;
+  background-color: #9D50BB;
+  color: white;
+  border: 7px solid white;
   border-radius: 50%;
   border-style: double;
 }
-#imgDivContent{
+
+#contentBounce{
   height: 25vh;
   width: 25vh;
   max-height: 200px;
@@ -73,7 +113,7 @@ h1{
   animation-direction: alternate;
 }
 
-#imgDiv{
+#imgBounce{
   height: 25vh;
   width: 25vh;
   max-height: 200px;
@@ -108,7 +148,7 @@ h1{
     height: 100vh;
   }
   h1{
-    visibility: hidden;
+    /* visibility: hidden; */
   }
   @keyframes bounce {
     0% { left:10px; top:0vh;}
@@ -132,6 +172,7 @@ h1{
     border-radius:50%;
     height: 100px;
     width: 100px;
+
     align-self: flex-end;
     text-align: center;
     padding-top: 30px;
